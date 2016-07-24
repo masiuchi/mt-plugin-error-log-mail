@@ -1,0 +1,10 @@
+name: ErrorLogMail
+
+callbacks:
+  MT::Log::post_save: $ErrorLogMail::MT::Plugin::ErrorLogMail::Callback::post_save_log
+
+config_settings:
+  ErrorLogMailLevel:
+    # WARNING | ERROR | SECURITY
+    default: 14
+
